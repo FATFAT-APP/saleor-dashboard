@@ -42,6 +42,10 @@ const props: CustomerListPageProps = {
         min: undefined,
       },
     },
+    phone: {
+      active: false,
+      value: "",
+    },
   },
   sort: {
     ...sortPageProps.sort,

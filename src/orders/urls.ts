@@ -9,6 +9,7 @@ import {
   Filters,
   FiltersWithKeyValueValues,
   FiltersWithMultipleValues,
+  NavigationUrl,
   Pagination,
   SingleAction,
   Sort,
@@ -134,9 +135,11 @@ export interface TransactionAction {
   type: TransactionActionEnum;
 }
 
-export type OrderUrlQueryParams =
+export type OrderUrlQueryParams = (
   | (Dialog<OrderUrlDialog> & SingleAction & { type?: never })
-  | TransactionAction;
+  | TransactionAction
+) &
+  NavigationUrl;
 
 export type OrderFulfillUrlFiltersType = "warehouseId" | "lineId";
 export type OrderFulfillUrlFilters = Filters<OrderFulfillUrlFiltersType>;

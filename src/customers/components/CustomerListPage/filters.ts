@@ -6,17 +6,20 @@ import { FilterOpts, MinMax } from "@dashboard/types";
 import {
   createDateField,
   createNumberField,
+  createTextField,
 } from "@dashboard/utils/filters/fields";
 import { defineMessages, IntlShape } from "react-intl";
 
 export enum CustomerFilterKeys {
   joined = "joined",
   numberOfOrders = "orders",
+  phone = "phone",
 }
 
 export interface CustomerListFilterOpts {
   joined: FilterOpts<MinMax>;
   numberOfOrders: FilterOpts<MinMax>;
+  phone: FilterOpts<string>;
 }
 
 const messages = defineMessages({
@@ -28,6 +31,10 @@ const messages = defineMessages({
   numberOfOrders: {
     id: "fhksPD",
     defaultMessage: "Number of Orders",
+  },
+  phone: {
+    id: "mXiD5u",
+    defaultMessage: "Phone Number",
   },
 });
 
@@ -53,6 +60,14 @@ export function createFilterStructure(
       ),
       active: opts.numberOfOrders.active,
       permissions: [PermissionEnum.MANAGE_ORDERS],
+    },
+    {
+      ...createTextField(
+        CustomerFilterKeys.phone,
+        intl.formatMessage(messages.phone),
+        opts.phone.value,
+      ),
+      active: opts.phone.active,
     },
   ].filter(filter =>
     hasPermissions(userPermissions ?? [], filter.permissions ?? []),

@@ -199,6 +199,11 @@ export type Search = Partial<{
 export type SingleAction = Partial<{
   id: string;
 }>;
+
+export type NavigationUrl = Partial<{
+  back: string;
+}>;
+
 export type Sort<TSort extends string = string> = Partial<{
   asc: boolean;
   sort: TSort;

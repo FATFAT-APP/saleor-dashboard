@@ -21,6 +21,7 @@ export enum CustomerListUrlFiltersEnum {
   numberOfOrdersFrom = "numberOfOrdersFrom",
   numberOfOrdersTo = "numberOfOrdersTo",
   query = "query",
+  phone = "phone",
 }
 export type CustomerListUrlFilters = Filters<CustomerListUrlFiltersEnum>;
 export type CustomerListUrlDialog = "remove" | TabActionDialog;

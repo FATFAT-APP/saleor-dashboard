@@ -276,6 +276,7 @@ export const OrderNormalDetails: React.FC<OrderNormalDetailsProps> = ({
         }
         onInvoiceSend={id => openModal("invoice-send", { id })}
         onSubmit={handleSubmit}
+        params={params}
       />
       <OrderCannotCancelOrderDialog
         onClose={closeModal}

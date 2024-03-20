@@ -9,6 +9,7 @@ import useAppState from "@dashboard/hooks/useAppState";
 import { ThemeProvider } from "@dashboard/theme";
 import { ThemeProvider as LegacyThemeProvider } from "@saleor/macaw-ui";
 import { SaleorProvider } from "@saleor/sdk";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import { render } from "react-dom";
 import { ErrorBoundary } from "react-error-boundary";
@@ -102,40 +103,45 @@ const handleLegacyTheming = () => {
 
 handleLegacyTheming();
 
+// Create a client
+const queryClient = new QueryClient();
+
 const App: React.FC = () => (
   <SaleorProvider client={saleorClient}>
     <ApolloProvider client={apolloClient}>
-      <BrowserRouter basename={getAppMountUri()}>
-        <LegacyThemeProvider
-          overrides={themeOverrides}
-          palettes={paletteOverrides}
-        >
-          <ThemeProvider>
-            <DateProvider>
-              <LocaleProvider>
-                <MessageManagerProvider>
-                  <ServiceWorker />
-                  <BackgroundTasksProvider>
-                    <AppStateProvider>
-                      <AuthProvider>
-                        <ShopProvider>
-                          <AppChannelProvider>
-                            <ExitFormDialogProvider>
-                              <DevModeProvider>
-                                <Routes />
-                              </DevModeProvider>
-                            </ExitFormDialogProvider>
-                          </AppChannelProvider>
-                        </ShopProvider>
-                      </AuthProvider>
-                    </AppStateProvider>
-                  </BackgroundTasksProvider>
-                </MessageManagerProvider>
-              </LocaleProvider>
-            </DateProvider>
-          </ThemeProvider>
-        </LegacyThemeProvider>
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter basename={getAppMountUri()}>
+          <LegacyThemeProvider
+            overrides={themeOverrides}
+            palettes={paletteOverrides}
+          >
+            <ThemeProvider>
+              <DateProvider>
+                <LocaleProvider>
+                  <MessageManagerProvider>
+                    <ServiceWorker />
+                    <BackgroundTasksProvider>
+                      <AppStateProvider>
+                        <AuthProvider>
+                          <ShopProvider>
+                            <AppChannelProvider>
+                              <ExitFormDialogProvider>
+                                <DevModeProvider>
+                                  <Routes />
+                                </DevModeProvider>
+                              </ExitFormDialogProvider>
+                            </AppChannelProvider>
+                          </ShopProvider>
+                        </AuthProvider>
+                      </AppStateProvider>
+                    </BackgroundTasksProvider>
+                  </MessageManagerProvider>
+                </LocaleProvider>
+              </DateProvider>
+            </ThemeProvider>
+          </LegacyThemeProvider>
+        </BrowserRouter>
+      </QueryClientProvider>
     </ApolloProvider>
   </SaleorProvider>
 );

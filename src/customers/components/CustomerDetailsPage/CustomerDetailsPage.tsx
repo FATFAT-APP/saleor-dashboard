@@ -142,6 +142,7 @@ const CustomerDetailsPage: React.FC<CustomerDetailsPageProps> = ({
                   viewAllHref={orderListUrl({
                     customer: customer?.email,
                   })}
+                  customerId={customerId}
                 />
                 <CardSpacer />
               </RequirePermissions>

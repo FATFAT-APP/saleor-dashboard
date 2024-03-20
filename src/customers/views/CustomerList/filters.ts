@@ -4,12 +4,14 @@ import {
   CustomerListFilterOpts,
 } from "@dashboard/customers/components/CustomerListPage";
 import { CustomerFilterInput } from "@dashboard/graphql";
+import { maybe } from "@dashboard/misc";
 
 import {
   createFilterTabUtils,
   createFilterUtils,
   getGteLteVariables,
   getMinMaxQueryParam,
+  getSingleValueQueryParam,
 } from "../../../utils/filters";
 import {
   CustomerListUrlFilters,
@@ -43,6 +45,10 @@ export function getFilterOpts(
         min: params.numberOfOrdersFrom ?? "",
       },
     },
+    phone: {
+      active: !!maybe(() => params.phone),
+      value: params.phone ?? "",
+    },
   };
 }
 
@@ -63,6 +69,16 @@ export function getFilterVariables(
         : null,
     }),
     search: params.query,
+    ...(params.phone
+      ? {
+          metadata: [
+            {
+              key: "phone",
+              value: params.phone,
+            },
+          ],
+        }
+      : {}),
   };
 }
 
@@ -85,6 +101,8 @@ export function getFilterQueryParam(
         CustomerListUrlFiltersEnum.numberOfOrdersFrom,
         CustomerListUrlFiltersEnum.numberOfOrdersTo,
       );
+    case CustomerFilterKeys.phone:
+      return getSingleValueQueryParam(filter, CustomerListUrlFiltersEnum.phone);
   }
 }
 

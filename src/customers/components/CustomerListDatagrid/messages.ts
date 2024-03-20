@@ -23,4 +23,9 @@ export const columnsMessages = defineMessages({
     defaultMessage: "No. of orders",
     description: "column header",
   },
+  phone: {
+    id: "A6+aSH",
+    defaultMessage: "Phone number",
+    description: "column header",
+  },
 });

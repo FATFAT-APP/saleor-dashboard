@@ -16,6 +16,7 @@ import OrderDetailsPage, { OrderDetailsPageProps } from "./OrderDetailsPage";
 
 const props: Omit<OrderDetailsPageProps, "classes"> = {
   loading: false,
+  params: {},
   onBillingAddressEdit: undefined,
   onTransactionAction: () => undefined,
   onFulfillmentApprove: () => undefined,

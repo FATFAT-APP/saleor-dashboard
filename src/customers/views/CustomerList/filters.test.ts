@@ -49,6 +49,10 @@ describe("Filtering URL params", () => {
           min: "1",
         },
       },
+      phone: {
+        active: false,
+        value: "+41 460-907-9374",
+      },
     },
     [
       {

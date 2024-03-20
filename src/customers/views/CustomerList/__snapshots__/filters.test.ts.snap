@@ -6,7 +6,8 @@ Object {
   "joinedTo": "2019-12-38",
   "numberOfOrdersFrom": "1",
   "numberOfOrdersTo": "5",
+  "phone": "+41 460-907-9374",
 }
 `;
 
-exports[`Filtering URL params should not be empty if active filters are present 2`] = `"joinedFrom=2019-12-09&joinedTo=2019-12-38&numberOfOrdersFrom=1&numberOfOrdersTo=5"`;
+exports[`Filtering URL params should not be empty if active filters are present 2`] = `"joinedFrom=2019-12-09&joinedTo=2019-12-38&numberOfOrdersFrom=1&numberOfOrdersTo=5&phone=%2B41%20460-907-9374"`;

@@ -688,6 +688,7 @@ export const customerList: Customers = [
     firstName: "curtis",
     id: "VXNlcjox",
     lastName: "Bailey",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -699,6 +700,7 @@ export const customerList: Customers = [
     firstName: "Curtis",
     id: "VXNlcjox",
     lastName: "Bailey",
+    phone: "+41 460-907-9376",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -710,6 +712,7 @@ export const customerList: Customers = [
     firstName: "Elizabeth",
     id: "VXNlcjoy",
     lastName: "Vaughn",
+    phone: "+41 460-907-9375",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -721,6 +724,7 @@ export const customerList: Customers = [
     firstName: "Michael",
     id: "VXNlcjoz",
     lastName: "Martinez",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -732,6 +736,7 @@ export const customerList: Customers = [
     firstName: "Kayla",
     id: "VXNlcjo0",
     lastName: "Griffin",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -743,6 +748,7 @@ export const customerList: Customers = [
     firstName: "Donna",
     id: "VXNlcjo1",
     lastName: "Robinson",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -754,6 +760,7 @@ export const customerList: Customers = [
     firstName: "James",
     id: "VXNlcjo2",
     lastName: "Bqall",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -765,6 +772,7 @@ export const customerList: Customers = [
     firstName: "Anthony",
     id: "VXNlcjo3",
     lastName: "Gonzalez",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -776,6 +784,7 @@ export const customerList: Customers = [
     firstName: "Anthony",
     id: "VXNlcjo3",
     lastName: "Gonzalez",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -787,6 +796,7 @@ export const customerList: Customers = [
     firstName: "Wesley",
     id: "VXNlcjo4",
     lastName: "Davis",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -798,6 +808,7 @@ export const customerList: Customers = [
     firstName: "Laura",
     id: "VXNlcjo5",
     lastName: "Stone",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -809,6 +820,7 @@ export const customerList: Customers = [
     firstName: "William",
     id: "VXNlcjoxMA==",
     lastName: "Miller",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -820,6 +832,7 @@ export const customerList: Customers = [
     firstName: "Donald",
     id: "VXNlcjoxMQ==",
     lastName: "Solomon",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -831,6 +844,7 @@ export const customerList: Customers = [
     firstName: "Anthony",
     id: "VXNlcjoxMg==",
     lastName: "Young",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -842,6 +856,7 @@ export const customerList: Customers = [
     firstName: "Hanson",
     id: "VXNlcjoxMw==",
     lastName: "Sharon",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -853,6 +868,7 @@ export const customerList: Customers = [
     firstName: "Laura",
     id: "VXNlcjoxNA==",
     lastName: "Jensen",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -864,6 +880,7 @@ export const customerList: Customers = [
     firstName: "Mark",
     id: "VXNlcjoxNQ==",
     lastName: "Lee",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 1,
@@ -875,6 +892,7 @@ export const customerList: Customers = [
     firstName: "David",
     id: "VXNlcjoxNg==",
     lastName: "Lawson",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -886,6 +904,7 @@ export const customerList: Customers = [
     firstName: "David",
     id: "VXNlcjoxNg==",
     lastName: "Lawson",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 2,
@@ -897,6 +916,7 @@ export const customerList: Customers = [
     firstName: "Faith",
     id: "VXNlcjoxNw==",
     lastName: "Smith",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -908,6 +928,7 @@ export const customerList: Customers = [
     firstName: "John",
     id: "VXNlcjoxOA==",
     lastName: "Jones",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -919,6 +940,7 @@ export const customerList: Customers = [
     firstName: "Ronald",
     id: "VXNlcjoxOQ==",
     lastName: "Fisher",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -930,6 +952,7 @@ export const customerList: Customers = [
     firstName: "Jason",
     id: "VXNlcjoyMA==",
     lastName: "Gray",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 0,
@@ -941,6 +964,7 @@ export const customerList: Customers = [
     firstName: "Tom",
     id: "VXNlcjoyMQ==",
     lastName: "Cooper",
+    phone: "+41 460-907-9374",
     orders: {
       __typename: "OrderCountableConnection",
       totalCount: 6,
@@ -1035,6 +1059,7 @@ export const customer: CustomerDetailsQuery["user"] &
   isActive: true,
   lastLogin: "2018-05-07T09:37:30.124154+00:00",
   lastName: "Cooper",
+  phone: "+48 123-456-789",
   lastPlacedOrder: {
     __typename: "OrderCountableConnection",
     edges: [

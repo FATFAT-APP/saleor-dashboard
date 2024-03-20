@@ -345,6 +345,7 @@ export const CustomerFragmentDoc = gql`
   email
   firstName
   lastName
+  phone: metafield(key: "phone")
 }
     `;
 export const AddressFragmentDoc = gql`

@@ -26,6 +26,11 @@ export const customerListStaticColumnsAdapter = (
       title: intl.formatMessage(columnsMessages.email),
       width: 450,
     },
+    {
+      id: "phone",
+      title: intl.formatMessage(columnsMessages.phone),
+      width: 450,
+    },
     ...(includeOrders
       ? [
           {
@@ -61,6 +66,8 @@ export const createGetCellContent =
         return readonlyTextCell(getUserName(rowData) ?? "");
       case "email":
         return readonlyTextCell(rowData?.email ?? "");
+      case "phone":
+        return readonlyTextCell(rowData?.phone ?? "");
       case "orders":
         return readonlyTextCell(rowData?.orders?.totalCount?.toString() ?? "");
       default:

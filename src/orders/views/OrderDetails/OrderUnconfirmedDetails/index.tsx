@@ -188,6 +188,7 @@ export const OrderUnconfirmedDetails: React.FC<
             loading={
               updateMetadataOpts.loading || updatePrivateMetadataOpts.loading
             }
+            params={params}
             errors={errors}
             onNoteAdd={variables =>
               extractMutationErrors(

@@ -1680,6 +1680,10 @@
     "context": "product discount removed title",
     "string": "{productName} discount was removed by"
   },
+  "A6+aSH": {
+    "context": "column header",
+    "string": "Phone number"
+  },
   "A9QSur": {
     "context": "area units type",
     "string": "Area"
@@ -4530,6 +4534,10 @@
     "context": "navigator placeholder",
     "string": "Search Customer"
   },
+  "TwYjMV": {
+    "context": "order prep status",
+    "string": "Prep Status"
+  },
   "TxYWkD": {
     "context": "page header, edit view",
     "string": "Edit grant refund"
@@ -7155,6 +7163,9 @@
   "mX7zJJ": {
     "context": "header",
     "string": "Create Page"
+  },
+  "mXiD5u": {
+    "string": "Phone Number"
   },
   "mYs3tb": {
     "string": "Product price cannot be lower than 0."

@@ -6,6 +6,7 @@ export const customerFragment = gql`
     email
     firstName
     lastName
+    phone: metafield(key: "phone")
   }
 `;
 

@@ -41,6 +41,7 @@ export default defineConfig(({ command, mode }) => {
     DEMO_MODE,
     CUSTOM_VERSION,
     FLAGS_SERVICE_ENABLED,
+    ORDER_STATUS_API,
   } = env;
 
   const base = STATIC_URL ?? "/";
@@ -53,7 +54,7 @@ export default defineConfig(({ command, mode }) => {
   const plugins = [
     react(),
     createHtmlPlugin({
-      entry: path.resolve(__dirname, "src", "index.tsx"),
+      entry: "/index.tsx",
       template: "index.html",
       inject: {
         data: {
@@ -82,7 +83,6 @@ export default defineConfig(({ command, mode }) => {
     }),
     copyOgImage(),
   ];
-
 
   if (!isDev) {
     console.log("Enabling service worker...");
@@ -142,6 +142,7 @@ export default defineConfig(({ command, mode }) => {
         ENVIRONMENT,
         DEMO_MODE,
         CUSTOM_VERSION,
+        ORDER_STATUS_API,
       },
     },
     build: {

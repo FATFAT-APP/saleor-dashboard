@@ -23,7 +23,7 @@ import {
 import { SubmitPromise } from "@dashboard/hooks/useForm";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { defaultGraphiQLQuery } from "@dashboard/orders/queries";
-import { orderListUrl } from "@dashboard/orders/urls";
+import { orderListUrl, OrderUrlQueryParams } from "@dashboard/orders/urls";
 import React from "react";
 import { useIntl } from "react-intl";
 
@@ -54,6 +54,7 @@ export interface OrderDetailsPageProps {
     id: string;
     name: string;
   }>;
+  params: OrderUrlQueryParams;
   loading: boolean;
   saveButtonBarState: ConfirmButtonTransitionState;
   errors: OrderErrorFragment[];
@@ -123,6 +124,7 @@ const OrderDetailsPage: React.FC<OrderDetailsPageProps> = props => {
     onShowMetadata,
     onMarkAsPaid,
     onSubmit,
+    params,
   } = props;
   const navigate = useNavigator();
   const intl = useIntl();
@@ -209,7 +211,10 @@ const OrderDetailsPage: React.FC<OrderDetailsPageProps> = props => {
 
         return (
           <DetailPageLayout>
-            <TopNav href={orderListUrl()} title={<Title order={order} />}>
+            <TopNav
+              href={params?.back ? params.back : orderListUrl()}
+              title={<Title order={order} />}
+            >
               <CardMenu
                 menuItems={[
                   ...selectCardMenuItems,
