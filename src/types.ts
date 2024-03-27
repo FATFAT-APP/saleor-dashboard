@@ -266,3 +266,7 @@ export enum StatusType {
 export type RelayToFlat<T extends { edges: Array<{ node: any }> }> = Array<
   T["edges"][0]["node"]
 >;
+
+export interface OrderStatusRes {
+  order_status: string;
+}

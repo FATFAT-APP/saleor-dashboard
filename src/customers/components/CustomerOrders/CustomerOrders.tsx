@@ -7,15 +7,17 @@ import { Pill } from "@dashboard/components/Pill";
 import ResponsiveTable from "@dashboard/components/ResponsiveTable";
 import Skeleton from "@dashboard/components/Skeleton";
 import TableRowLink from "@dashboard/components/TableRowLink";
+import { ORDER_STATUS_API } from "@dashboard/config";
 import { customerUrl } from "@dashboard/customers/urls";
 import {
   CustomerDetailsQuery,
   CustomerDetailsQueryResult,
 } from "@dashboard/graphql";
 import { orderUrl } from "@dashboard/orders/urls";
-import { RelayToFlat } from "@dashboard/types";
+import { OrderStatusRes, RelayToFlat } from "@dashboard/types";
 import { Card, TableBody, TableCell, TableHead } from "@material-ui/core";
 import { makeStyles } from "@saleor/macaw-ui";
+import { Text } from "@saleor/macaw-ui-next";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import React from "react";
@@ -41,11 +43,6 @@ export interface CustomerOrdersProps {
   customerId?: string;
 }
 
-const ORDER_STATUS_API = process.env.ORDER_STATUS_API || "";
-interface OrderStatusRes {
-  order_status: string;
-}
-
 const Order = ({
   order,
   customerId,
@@ -57,7 +54,8 @@ const Order = ({
   };
   customerId?: string;
 }) => {
-  const { data } = useQuery({
+  const intl = useIntl();
+  const { data, isError } = useQuery({
     queryKey: ["order-status", { id: order.id }],
     queryFn: async () => {
       const { data } = await axios.get<OrderStatusRes>(ORDER_STATUS_API, {
@@ -67,6 +65,7 @@ const Order = ({
       });
       return data;
     },
+    enabled: !!order,
   });
 
   const classes = useStyles();
@@ -94,7 +93,19 @@ const Order = ({
         )}
       </TableCell>
       <TableCell>
-        {maybe(() => data?.order_status) ? data?.order_status : <Skeleton />}
+        {maybe(() => data?.order_status) ? (
+          <Pill color="info" label={data?.order_status} />
+        ) : isError ? (
+          <Text variant="bodyEmp">
+            {intl.formatMessage({
+              id: "74UNr9",
+              defaultMessage: "Fail to load",
+              description: "error message when order status is not loaded",
+            })}
+          </Text>
+        ) : (
+          <Skeleton />
+        )}
       </TableCell>
       <TableCell>
         {maybe(() => order.paymentStatus.status) !== undefined ? (

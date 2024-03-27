@@ -192,5 +192,6 @@ export const APP_VERSION =
 
 export const DEMO_MODE = process.env.DEMO_MODE === "true";
 export const GTM_ID = process.env.GTM_ID;
+export const ORDER_STATUS_API = process.env.ORDER_STATUS_API || "";
 
 export const DEFAULT_NOTIFICATION_SHOW_TIME = 3000;

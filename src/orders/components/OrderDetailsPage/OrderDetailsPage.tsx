@@ -37,6 +37,7 @@ import OrderFulfilledProductsCard from "../OrderFulfilledProductsCard";
 import OrderHistory, { FormData as HistoryFormData } from "../OrderHistory";
 import OrderInvoiceList from "../OrderInvoiceList";
 import { OrderPaymentOrTransaction } from "../OrderPaymentOrTransaction/OrderPaymentOrTransaction";
+import OrderPrepStatus from "../OrderPrepStatus";
 import OrderUnfulfilledProductsCard from "../OrderUnfulfilledProductsCard";
 import { messages } from "./messages";
 import Title from "./Title";
@@ -288,6 +289,7 @@ const OrderDetailsPage: React.FC<OrderDetailsPageProps> = props => {
                 onMarkAsPaid={onMarkAsPaid}
                 onAddManualTransaction={onAddManualTransaction}
               />
+              <OrderPrepStatus order={order} />
               <Metadata
                 isLoading={loading}
                 data={data[order?.id]}

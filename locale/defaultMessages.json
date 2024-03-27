@@ -1311,6 +1311,10 @@
     "context": "table header product label",
     "string": "Product"
   },
+  "74UNr9": {
+    "context": "error message when order status is not loaded",
+    "string": "Fail to load"
+  },
   "74Zo/H": {
     "context": "channel slug",
     "string": "Slug"
@@ -2741,6 +2745,10 @@
   },
   "HAlOn1": {
     "string": "Name"
+  },
+  "HF86a0": {
+    "context": "loading message",
+    "string": "Loading..."
   },
   "HLqWXA": {
     "context": "voucher value requirement",
@@ -5429,6 +5437,10 @@
     "context": "details title",
     "string": "Details"
   },
+  "Zp3QYR": {
+    "context": "error message",
+    "string": "Failed to load order status"
+  },
   "ZprV2g": {
     "context": "app has been installed",
     "string": "{name} is ready to be used"
@@ -7191,6 +7203,10 @@
   },
   "mgFyBA": {
     "string": "This name should be unique"
+  },
+  "mlIMgJ": {
+    "context": "header",
+    "string": "Prep Order Status"
   },
   "mm0CXe": {
     "string": "You should change your password every month to avoid security issues."
